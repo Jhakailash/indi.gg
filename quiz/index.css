@@ -45,7 +45,7 @@ label:hover{
 #submit_button{
     font-size: x-large;
     font-family: sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     color: whitesmoke;
     background-color: green;
     border: none;
@@ -57,3 +57,23 @@ label:hover{
     cursor: pointer;
 
 }
+#score{
+    color: rgb(255, 0, 247);
+}
+.scor_p{
+    color: rgb(112, 9, 237);
+}
+
+@media only screen and (max-width: 600px) {
+    #submit_button{
+        width: 70%;
+    }
+    .main_container{
+        height: 550px;
+
+    }
+   
+
+}
+
+    
