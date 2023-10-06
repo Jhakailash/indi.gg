@@ -1,12 +1,22 @@
 const quizData = [
     {
         question: "What is the capital of India?",
-        options: ["Kolkata", "Delhi", "Goa", "Bihar"],
+        options: ["Kolkata", "Delhi", "Bihar", "Goa","Jharkhand"],
         correctAnswer: "Delhi"
     },
     {
         question: "What is the capital of Jharkhand?",
-        options: ["Bokaro", "Dhanbad", "Ranchi", "Dumka"],
+        options: ["Bokaro", "Dhanbad", "Ranchi", "Dumka","deoghar"],
+        correctAnswer: "Delhi"
+    },
+    {
+        question: "What is the capital of Bihar?",
+        options: ["Patna", "Madhubani", "Balia", "Gaya","Samastipur"],
+        correctAnswer: "Delhi"
+    },
+    {
+        question: "What is the capital of west-bengal?",
+        options: ["Purlia", "Dhanbad", "Silliguri", "Aasansol","Kolkata"],
         correctAnswer: "Delhi"
     },
     // Add more questions and answers here
@@ -17,11 +27,11 @@ let score = 0;
 
 function loadQuestion() {
     const questionElement = document.getElementById("question");
-    const optionsContainer = document.getElementById("options-container");
+    const optionsContainer = document.getElementById("options_container");
     
     questionElement.textContent = `Question ${currentQuestionIndex + 1}: ${quizData[currentQuestionIndex].question}`;
     
-    // Populate answer options
+    
     optionsContainer.innerHTML = "";
     quizData[currentQuestionIndex].options.forEach(option => {
         const label = document.createElement("label");
@@ -37,7 +47,7 @@ function loadQuestion() {
 
 loadQuestion();
 
-document.getElementById("submit-button").addEventListener("click", () => {
+document.getElementById("submit_button").addEventListener("click", () => {
     const selectedAnswer = document.querySelector("input[name='answer']:checked");
     
     if (selectedAnswer) {
@@ -48,7 +58,7 @@ document.getElementById("submit-button").addEventListener("click", () => {
         if (currentQuestionIndex < quizData.length) {
             loadQuestion();
         } else {
-            // Quiz is complete, display final score
+            
             const scoreElement = document.getElementById("score");
             scoreElement.textContent = score;
         }
