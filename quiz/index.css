@@ -52,8 +52,23 @@ label:hover{
     border-radius: 50px;
     width: 15%;
 }
-#submit_button:hover{
+#next_button{
+    font-size: x-large;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: whitesmoke;
     background-color: #1861ab;
+    border: none;
+    border-radius: 50px;
+    width: 15%;
+}
+#submit_button:hover{
+    background-color: teal;
+    cursor: pointer;
+
+}
+#next_button:hover{
+    background-color: teal;
     cursor: pointer;
 
 }
@@ -68,6 +83,8 @@ label:hover{
     #submit_button{
         width: 70%;
     }
+
+    
     .main_container{
         height: 550px;
 
